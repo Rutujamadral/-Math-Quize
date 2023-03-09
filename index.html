@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Math Quiz</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    </head>
+    <body>
+    <span id="logo">Math Quiz</span>
+    <div class="titlebar">
+        <div id="count">
+            <img src="https://cdn-icons-png.flaticon.com/512/5579/5579229.png"><span id="total">0</span>
+        </div>
+        <div id="count">
+            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png?w=740&t=st=1678359793~exp=1678360393~hmac=134d5283ebb1f50c81aedd3e86236fae41fdad152bd1ba276bcd185ce4f2f2e2"><span id="correct">0</span>
+        </div>
+        <div id="count">
+            <img src="https://img.icons8.com/emoji/256/cross-mark-button-emoji.png"><span id="wrong">0</span>
+        </div>
+    </div>
+        
+    <div id="diff">
+        <h2>Select level</h2>
+        <button onclick="level(1)">Very Easy</button><br />
+        <button onclick="level(2)">Easy</button><br />
+        <button onclick="level(3)">Medium</button><br />
+        <button onclick="level(4)">Hard</button><br />
+        <button onclick="level(5)">Very Hard</button>
+        <div style="height:20px"></div>
+        <button style="height: 40px;width:220px" id="mode">Quick Mode (OFF)</button><button style="width:40px;height:40px" id="ex">?</button>
+    </div>
+    
+    <div id="quizbody">
+        <div style="height:10px"></div>
+        <div id='serial'><span>Question. </span><span id='no'>1</span></div>
+        <p id="question"></p>
+        <center><div id="timer">
+            <div id="bar"></div>
+        </div></center>
+        <br />
+        <input id="answer" readonly>
+        <button id="del" style="width:45px;padding:5px;">←</button>
+        <br />
+        <button id="donebtn" onclick="check()">Done</button>
+        <div id="nums">     
+                <button onclick="ins(1)">1</button> 
+                <button onclick="ins(2)">2</button> 
+                <button onclick="ins(3)">3</button> 
+                <button onclick="ins('-')">-</button> 
+                <br> 
+                <button onclick="ins(4)">4</button> 
+                <button onclick="ins(5)">5</button> 
+                <button onclick="ins(6)">6</button> 
+                <button onclick="ins('.')">.</button> 
+                <br> 
+                <button onclick="ins(7)">7</button> 
+                <button onclick="ins(8)">8</button> 
+                <button onclick="ins(9)">9</button> 
+                <button onclick="ins(0)">0</button> 
+        </div>
+        <br />
+        <button id="res">Reset</button>
+    </div>
+    <br />
+        <footer>  
+      </footer>
+    </body>
+    <script src="script.js"></script>
+</html>
